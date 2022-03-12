@@ -1,4 +1,4 @@
-edit enx.example => enx
+edit env.example => env
 
 php artisan key:generatre
 
