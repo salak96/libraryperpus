@@ -6,7 +6,7 @@
 	<div class="row">    
           <div class="col-md-6">
             <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header justify-content-between" >
                 <h3 class="card-title">Edit Catalog</h3>
               </div>
              
@@ -19,9 +19,6 @@
                     <input type="text"name="name"class="form-control"  placeholder="Enter name
                      " required="" value="{{$catalog->name}}">
                   </div>
-            
-            
-
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

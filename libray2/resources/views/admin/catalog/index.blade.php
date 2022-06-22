@@ -35,7 +35,7 @@
 									<form action="{{ url('catalogs/'.$catalog->id) }}" method="POST">
 										@csrf
 										@method('delete')
-										<button type="submit" class="btn btn-sm btn-danger text-white" onclick="return confirm('Are you sure want to delete this data?')">Delete</button>
+										<button type="submit" class="btn btn-sm btn-danger text-white" style="text-align:center" onclick="return confirm('Are you sure want to delete this data?')">Delete</button>
 									</form>
 								</td>
 							</tr>	

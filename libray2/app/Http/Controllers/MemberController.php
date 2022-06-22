@@ -23,17 +23,20 @@ class MemberController extends Controller
 
     public function api(Request $request)
     {
-        if ($request->sex) {
-            $datas = Member::where('sex', $request->sex)->get();
+        if ($request->gender) {
+            $members = Member::where('gender', $request->gender)->get();
         } else {
-            $datas = Member::all();
+            $members = Member::all();
         }
 
         $datatables = datatables()
-                        ->of($datas)
-                        ->addIndexColumn();
-                        return $datatables->make(true);
+            ->of($members)
+            ->addColumn('date', function ($member) {
+                return convertDate($member->created_at);
+            })
+            ->addIndexColumn();
 
+        return $datatables->make(true);
     }
 
     /**
